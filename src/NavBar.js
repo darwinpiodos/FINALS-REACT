@@ -27,7 +27,7 @@ function NavBar(){
 
 
     return(
-        <div className=" container-fluid bg-primary d-flex align-items-center p-2">
+        <div style={{backgroundColor:"#0497e0"}} className=" container-fluid d-flex align-items-center p-3">
             
                 <div className="container col-lg-6 d-flex align-items-center ">
                     <div className="logo-mlgcl-png ms-5 m-0">
@@ -36,7 +36,7 @@ function NavBar(){
 
                     </div>
                     <div className="logo-mlgcl-name ms-3">
-                        <p style={{fontSize:22,marginTop:5}}>MLGCL <br></br><span style={{fontSize:18}}>COVID-19 CONTACT TRACING SYSTEM</span></p>
+                        <p style={{fontSize:22,marginTop:5,color:"white",lineHeight:"20px", fontWeight:"bold"}}>MLGCL <br></br><span style={{fontSize:16}}>COVID-19 CONTACT TRACING SYSTEM</span></p>
                        
                     </div>
                 </div>
@@ -48,20 +48,20 @@ function NavBar(){
                             localStorage.getItem('user-info') ?
                             <>
 
-                                        <Link to="/">Product List </Link>
+                                        <Link to="/" className='links-menu' style={{fontSize:18}}>Product List </Link>
                              
                               
-                                        <Link to="/add">Add Products</Link>
+                                        <Link to="/add" className='links-menu' style={{fontSize:18}}>Add Products</Link>
                                          
-                                        <Link to="/">Update Products</Link>
+                                        <Link to="/" className='links-menu' style={{fontSize:18}}>Update Products</Link>
                                           
                                         </>
                                         :
                                         <>
                                           
-                                            <Link to="/login" className='links-menu'>Login</Link>
+                                            <Link to="/login" className='links-menu' style={{fontSize:18}}>Login</Link>
                                          
-                                            <Link to="/register" className='links-menu'>Register</Link>
+                                            <Link to="/register" className='links-menu' style={{fontSize:18}}>Register</Link>
                                           
                             </>
 

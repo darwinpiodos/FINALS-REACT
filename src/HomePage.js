@@ -11,7 +11,7 @@ function HomePage()
                 <div className="piodos-navigation-items">
                         <NavBar />
                 </div>
-                <div className="container-fluid piodos-body-content">
+                <div className="container-fluid piodos-body-content" style={{marginBottom:"6%"}}>
                     <div className='container-fluid col-lg-6 p-0'>
                         <HomepageLeft/>
                     </div>
