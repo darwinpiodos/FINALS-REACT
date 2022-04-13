@@ -51,7 +51,7 @@ function NavBar(){
                             localStorage.getItem('user-info') ?
                             <>
 
-                                        <Link to="/" className='links-menu' style={{fontSize:18}}>Product List </Link>
+                                        <Link to="/list" className='links-menu' style={{fontSize:18}}>User List </Link>
                              
                               
                                         <Link to="/add" className='links-menu' style={{fontSize:18}}>Add Products</Link>
