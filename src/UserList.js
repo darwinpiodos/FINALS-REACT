@@ -41,11 +41,15 @@ function UserList()
                     <table class="table">
                         <thead>
                             <tr>
-                            <th scope="col">Product ID #</th>
+                            <th scope="col">User ID #</th>
                             <th scope="col">Name</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Description</th>
-                            <th scope="col">Image</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Gender</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Mobile Number</th>
+                            <th scope="col">Birthday</th>
+                            <th scope="col">Zipcode</th>
+                            <th scope="col">Photo</th>
                             <th scope="col">Operation</th>
                             </tr>
                         </thead>
@@ -54,10 +58,13 @@ function UserList()
                             data.map((item)=>
                             <tr>
                             <th scope="row">{item.id}</th>
-                            <td>{item.firstname}</td>
-                            <td>{item.middlename}</td>
-                            <td>{item.lastname}</td>
-                            <td>{item.image}</td>
+                            <td>{item.firstname} {item.middlename} {item.lastname}</td>
+                            <td>{item.email}</td>
+                            <td>{item.gender}</td>
+                            <td>{item.barangay}, {item.town}, {item.province}</td>
+                            <td>{item.primarynumber}</td>
+                            <td>{item.month} {item.day}, {item.year}</td>
+                            <td>{item.zipcode}</td>
                             <td><img style={{width:100,height:100}} src={"http://localhost:8000/" + item.image} /></td>
 
                             <td>

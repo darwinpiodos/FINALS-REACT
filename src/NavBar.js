@@ -69,36 +69,50 @@ function NavBar(){
                             </>
 
                         }   
+
+
+
+
+{
+    
+                
+                localStorage.getItem('user-info') ?    
+               
+                <Navbar>
+                    
+                    <Nav>
+                        <NavDropdown title={user && user.firstname} className="btn btn-primary" style={{color:"white"}}>
+                            <NavDropdown.Item className="dropdown-item"onClick={logOut}>Logout</NavDropdown.Item>
+
+                            <NavDropdown.Item className="dropdown-item"onClick={profile}>Profile</NavDropdown.Item>
+
+
+
+                        </NavDropdown>
+
+                            
+
+                            
+                    </Nav>
+
+                </Navbar>
+
+              
+
+                :null  
+
+             
+
+        }
+
+
+
+
                  
                 </div>
 
                 
-                {
                 
-                        localStorage.getItem('user-info') ?    
-                           
-                        <Navbar>
-                            
-                            <Nav>
-                                <NavDropdown title={user && user.firstname} className="btn btn-primary" style={{color:"white"}}>
-                                    <NavDropdown.Item className="dropdown-item"onClick={logOut}>Logout</NavDropdown.Item>
-
-                                    <NavDropdown.Item className="dropdown-item"onClick={profile}>Profile</NavDropdown.Item>
-
-
-
-                                </NavDropdown>
-
-                                    
-
-                                    
-                            </Nav>
-
-                        </Navbar>
-
-                        :null   
-
-                }
 
 
            
