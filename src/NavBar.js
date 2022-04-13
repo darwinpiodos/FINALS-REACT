@@ -1,3 +1,6 @@
+
+
+import { Navbar,Nav,NavDropdown } from 'react-bootstrap';
 import userEvent from '@testing-library/user-event';
 import{Link, useHistory} from 'react-router-dom';
 import './App.css';
@@ -12,24 +15,24 @@ function NavBar(){
     let user= JSON.parse(localStorage.getItem('user-info'))
     const history=useHistory();
 
-    // function logOut()
-    // {
-    //     localStorage.clear();
-    //     history.push('/register')
-    // }
+    function logOut()
+    {
+        localStorage.clear();
+        history.push('/')
+    }
 
-    // function profile()
-    // {
+    function profile()
+    {
       
-    //     history.push('/add')
+        history.push('/')
 
 
-
+    }
 
     return(
         <div style={{backgroundColor:"#0497e0"}} className=" container-fluid d-flex align-items-center p-3">
             
-                <div className="container col-lg-6 d-flex align-items-center ">
+                <div className="container col-lg-4 d-flex align-items-center ">
                     <div className="logo-mlgcl-png ms-5 m-0">
                    
                         <img style={{width:40, marginLeft:100}}src={Logo} />
@@ -42,7 +45,7 @@ function NavBar(){
                 </div>
 
 
-                <div className="container col-lg-6 piodos-left">
+                <div className="container col-lg-7 piodos-left">
                     
                         {
                             localStorage.getItem('user-info') ?
@@ -68,6 +71,36 @@ function NavBar(){
                         }   
                  
                 </div>
+
+                
+                {
+                
+                        localStorage.getItem('user-info') ?    
+                           
+                        <Navbar>
+                            
+                            <Nav>
+                                <NavDropdown title={user && user.firstname} className="btn btn-primary" style={{color:"white"}}>
+                                    <NavDropdown.Item className="dropdown-item"onClick={logOut}>Logout</NavDropdown.Item>
+
+                                    <NavDropdown.Item className="dropdown-item"onClick={profile}>Profile</NavDropdown.Item>
+
+
+
+                                </NavDropdown>
+
+                                    
+
+                                    
+                            </Nav>
+
+                        </Navbar>
+
+                        :null   
+
+                }
+
+
            
         </div>
     )
