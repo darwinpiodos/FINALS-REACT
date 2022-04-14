@@ -28,8 +28,9 @@ function Login()
         });
 
         result = await result.json();
+        
         localStorage.setItem("user-info",JSON.stringify(result))
-        history.push("/")
+        history.push("/profile")
     }
     return(
       

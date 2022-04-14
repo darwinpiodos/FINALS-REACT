@@ -4,6 +4,8 @@ import HomePage from './HomePage';
 import Register from './Register';
 import Login from './Login';
 import UserList from './UserList';
+import DashboardPage from './DashboardPage';
+import ProfilePage from './ProfilePage';
 
 
 function App() {
@@ -15,6 +17,10 @@ function App() {
             <Route  path="/login" component={Login}></Route>
             <Route  path="/register" component={Register}></Route>
             <Route  path="/list" component={UserList}></Route>
+            <Route  path="/dashboard" component={DashboardPage}></Route>
+
+            <Route  path="/profile" component={ProfilePage}></Route>
+            
           </Switch>
          </BrowserRouter>
     </div>

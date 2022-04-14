@@ -24,7 +24,7 @@ function NavBar(){
     function profile()
     {
       
-        history.push('/')
+        history.push('/profile')
 
 
     }
@@ -101,7 +101,7 @@ function NavBar(){
 
                 :null  
 
-             
+                
 
         }
 
