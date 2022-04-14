@@ -89,9 +89,25 @@ function Register()
 
         
         
-        result=await result.json()
-        localStorage.setItem("user-info",JSON.stringify(result))
+
+
+        console.warn(email, password)
+        let item={email,password};
+        let res= await fetch ("http://localhost:8000/api/login ",{
+            method:'POST',
+            headers:{
+                "Content-Type":"application/json",
+                "Accept":'application/json'
+            },
+            
+            body:JSON.stringify(item)
+        });
+
+        res = await res.json();
+
+        localStorage.setItem("user-info",JSON.stringify(res))
         history.push("/profile")
+
 
          
     }

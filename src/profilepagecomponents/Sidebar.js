@@ -22,9 +22,9 @@ function Sidebar()
             <hr></hr>
 
             <div className=' m-0'>
-
+                <Link to="/dashboard">
                 <div className='fs-3 p-3 background-color-text' ><i class="fa brands fa-windows me-3 ms-4 "></i>Dashboard</div>
-
+                </Link>
                 <div className='fs-3 p-3 bg-link background-color-text  '><i class="fa solid fa-user me-3 ms-4"></i>Profile</div>
                 <div className=' fs-3 p-3 background-color-text'><i class="fa solid fa-wrench me-3 ms-4"></i>Settings</div>
                 

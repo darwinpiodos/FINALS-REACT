@@ -25,9 +25,10 @@ function Sidebar()
 
                 <div className='text-light fs-3 bg-secondary p-3' ><i class="fa brands fa-windows me-3 ms-4"></i>Dashboard</div>
 
+                <Link to="/profile">
                 <div className='text-light fs-3 p-3'><i class="fa solid fa-user me-3 ms-4"></i>Profile</div>
                 <div className='text-light fs-3 p-3'><i class="fa solid fa-wrench me-3 ms-4"></i>Settings</div>
-
+                </Link>
                 
                 <div className='text-light fs-3 p-3'><i class="fa solid fa-database me-3 ms-4"></i>User List</div>
 

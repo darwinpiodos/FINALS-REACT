@@ -14,6 +14,9 @@ function Login()
         }
     },[])
 
+
+
+
     async function login()
     {
         console.warn(email, password)
@@ -24,14 +27,20 @@ function Login()
                 "Content-Type":"application/json",
                 "Accept":'application/json'
             },
+            
             body:JSON.stringify(item)
         });
 
         result = await result.json();
-        
+
         localStorage.setItem("user-info",JSON.stringify(result))
         history.push("/profile")
     }
+
+
+
+
+
     return(
       
         <div className='row'>
