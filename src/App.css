@@ -18,6 +18,10 @@ body{
   margin: 3%;
 
 }
+
+.links-menu:hover{
+  color: whitesmoke;
+}
 .piodos-left{
 
  text-align: right;
@@ -80,3 +84,5 @@ body{
   background-color: transparent;
   cursor: pointer;
 }
+
+

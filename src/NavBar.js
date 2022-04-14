@@ -51,21 +51,23 @@ function NavBar(){
                             localStorage.getItem('user-info') ?
                             <>
 
-                                        <Link to="/list" className='links-menu' style={{fontSize:18}}>User List </Link>
-                             
+                                        <Link to="/" className='links-menu' style={{fontSize:18, textDecoration:"none"}}>Home</Link>
+                                        
+                                        <Link to="/dashboard" className='links-menu' style={{fontSize:18, textDecoration:"none"}}>Dashboard</Link>
                               
-                                        <Link to="/add" className='links-menu' style={{fontSize:18}}>Add Products</Link>
+                                        <Link to="/profile" className='links-menu' style={{fontSize:18, textDecoration:"none"}}>Profile</Link>
                                          
-                                        <Link to="/" className='links-menu' style={{fontSize:18}}>Update Products</Link>
+                                       
                                           
                                         </>
                                         :
                                         <>
+                                           
+                                                <Link to="/login" className='links-menu' style={{fontSize:18, textDecoration:"none"}}>Login</Link>
                                           
-                                            <Link to="/login" className='links-menu' style={{fontSize:18}}>Login</Link>
-                                         
-                                            <Link to="/register" className='links-menu' style={{fontSize:18}}>Register</Link>
-                                          
+                                           
+                                                <Link to="/register" className='links-menu' style={{fontSize:18, textDecoration:"none"}}>Register</Link>
+                                            
                             </>
 
                         }   

@@ -12,6 +12,7 @@ function App() {
   return (
     <div className="App">
          <BrowserRouter>
+         
           <Switch>
             <Route exact path="/" component={HomePage}></Route>
             <Route  path="/login" component={Login}></Route>
