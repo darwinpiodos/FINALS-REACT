@@ -6,6 +6,7 @@ import Login from './Login';
 import UserList from './UserList';
 import DashboardPage from './DashboardPage';
 import ProfilePage from './ProfilePage';
+import EditProfile from './EditProfile';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route  path="/dashboard" component={DashboardPage}></Route>
 
             <Route  path="/profile" component={ProfilePage}></Route>
+            <Route  path="/editprofile" component={EditProfile}></Route>
             
           </Switch>
          </BrowserRouter>

@@ -1,6 +1,5 @@
 import NavBar from './NavBar';
 import React from 'react';
-
 import Footer from './Footer';
 import Sidebar from './profilepagecomponents/Sidebar';
 import Content from './profilepagecomponents/Content';

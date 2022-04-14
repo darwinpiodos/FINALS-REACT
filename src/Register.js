@@ -237,7 +237,9 @@ function Register()
                                         </div>
                                   
                                     <div className='card-body'>
-                                    <input type="file" onChange={(e)=>setImage(e.target.files[0])} className="form-control fs-4  p-5 text-center"></input>
+                                        
+                                    <input type="file" onChange={(e)=>setImage(e.target.files[0])} className="form-control text-center"></input>
+
                                     </div>
                                 </div>
                             </div>
@@ -245,8 +247,9 @@ function Register()
 
 
                 <div className='form-group m-3'>
-                    <button class="btn btn-primary w-100" onClick={signUp}>Sign Up</button>
+                    <button class="btn w-100 fs-4 p-4" onClick={signUp}style={{backgroundColor:"#0497e0", color:"white"}}>Sign Up</button>
                 </div>
+
 
             </div>
         </div>

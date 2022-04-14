@@ -24,9 +24,24 @@ function InfoCard()
                 <h2 className="fs-1">User Information</h2>
                 <div className="card">
                     <div className="card-header">
-                        <button className="btn btn-outline-secondary m-3 fs-4">See More</button>
-                        <button className="btn btn-outline-secondary m-3 fs-4">Edit Profile</button>
 
+
+                        {
+                            localStorage.getItem('user-info') ?
+                            <>
+
+                        <button className="btn btn-outline-secondary m-3 fs-4">See More</button>
+
+                        <Link to="/editprofile">
+                        <button className="btn btn-outline-secondary m-3 fs-4">Edit Profile</button>
+                        </Link>
+                            </>
+
+
+                        :null
+
+
+                        }
                     </div>
 
 
