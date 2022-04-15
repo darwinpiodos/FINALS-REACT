@@ -63,6 +63,38 @@ function EditProfile(props)
     })
 
 
+
+    const updateUser =(e) =>
+    {
+        e.preventDefault();
+
+        const user_id = props.match.params.id
+        
+        const formData = new FormData();
+        formData.append('image',image);
+        formData.append('firstname',firstname);
+        formData.append('middlename',middlename);
+        formData.append('lastname',lastname);
+        formData.append('email',email);
+        formData.append('password',password);
+        formData.append('gender',gender);
+        formData.append('month',month);
+        formData.append('day',day);
+        formData.append('year',year);
+        formData.append('primarynumber',primarynumber);
+        formData.append('secondarynumber',secondarynumber);
+        formData.append('landline',landline);
+        formData.append('province',province);
+        formData.append('town',town);
+        formData.append('barangay',barangay);
+        formData.append('zipcode',zipcode);
+        formData.append('currentaddress',currentaddress);
+     
+        
+      
+
+    }
+    
   
     return(
 
@@ -245,7 +277,15 @@ function EditProfile(props)
                                         
                                     <input type="file" className="form-control text-center fs-3 mb-5" defaultValue={datum.image}></input>
 
-                                    <div></div>
+                                    <div style={{ backgroundImage:`url(${"http://localhost:8000/" + datum.image})`,
+                                        backgroundPosition: 'center',
+                                        backgroundSize: 'cover',
+                                        backgroundRepeat: 'no-repeat',
+                                        position:"relative",
+                                        width:120,
+                                        height:120,
+                                        margin:"0 auto"}}>
+                                    </div>
 
                                     </div>
                                 </div>
@@ -254,7 +294,7 @@ function EditProfile(props)
 
 
                 <div className='form-group m-3'>
-                    <button class="btn w-100 fs-2 p-4 mt-5 mb-5 sign-up" >SIGN UP</button>
+                    <button onClick={updateUser} class="btn w-100 fs-2 p-4 mt-5 mb-5 sign-up" >UPDATE</button>
                 </div>
 
 

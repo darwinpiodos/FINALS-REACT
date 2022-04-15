@@ -31,10 +31,6 @@ function UserList()
 
     }
 
-
-
-
-    
     return(
         
     
@@ -59,7 +55,9 @@ function UserList()
                         </thead>
                         <tbody> 
                             {
+
                             data.map((item)=>
+
                             <tr>
                             <th scope="row">{item.id}</th>
                             <td>{item.firstname} {item.middlename} {item.lastname}</td>
@@ -74,7 +72,7 @@ function UserList()
                             <td>
                                 <button onClick={()=>deleteOperation(item.id)} className='btn btn-danger'>Delete</button>
 
-                                <Link to ={"update/" + item.id}>
+                                <Link to ={"editprofile/" + item.id}>
                                     <button className=' btn btn-primary'>Edit</button>
                                 </Link>
 
