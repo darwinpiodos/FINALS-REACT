@@ -22,7 +22,7 @@ function App() {
             <Route  path="/dashboard" component={DashboardPage}></Route>
 
             <Route  path="/profile" component={ProfilePage}></Route>
-            <Route  path="/editprofile" component={EditProfile}></Route>
+            <Route  path="/editprofile/:id" component={EditProfile}></Route>
             
           </Switch>
          </BrowserRouter>

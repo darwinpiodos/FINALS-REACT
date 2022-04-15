@@ -86,3 +86,16 @@ body{
 }
 
 
+.sign-up{
+  background-color:#0497e0;
+  color: white;
+}
+
+
+.sign-up:hover{
+  color:whitesmoke;
+  background-color:#02a6f7;
+
+
+
+}

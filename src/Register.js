@@ -1,6 +1,9 @@
 import NavBar from './NavBar';
 import React, {useState, useEffect} from 'react';
 import {useHistory} from 'react-router-dom';
+import Footer from './Footer';
+import './App.css';
+
 
 function Register()
 {
@@ -118,8 +121,19 @@ function Register()
 
         <div className='row'>
             <NavBar/>
+            <div className='mt-5'></div>
             <div className='col-sm-6 offset-sm-3'>
-                <h1>Register</h1>
+
+                <h1 className='display-3 mt-5'>Registration</h1>
+                <small className='fs-5 mb-5'>Please provide all information requested below</small>
+
+                <div className='mb-5'>
+                    <hr className='mb-5'></hr>
+                </div>
+
+                <h1 className='fs-2 mt-5'>Basic Information</h1>
+
+              
 
                     <section className='d-flex'>
                         <div className='form-group m-3' style={{width:"50%"}}>
@@ -148,6 +162,8 @@ function Register()
                 <section className='form-group m-3'>
                     <label className='form-label fs-4'>Email</label>
                     <input type="text" value={email} onChange={(e)=>setEmail(e.target.value)} className="fs-4 form-control p-5" placeholder="enter email"></input>
+                    <small style={{color:"#0497e0",fontSize:"12px"}}>Make sure your email address is correct.</small>
+               
                         
                 </section>
 
@@ -163,71 +179,110 @@ function Register()
 
 
 
-                <section className='form-group m-3'>
+                <section className='form-group m-3 mb-5 pb-3'>
 
-                    
-                    <input type="text" value={gender} onChange={(e)=>setGender(e.target.value)} className="form-control" placeholder="enter gender"></input>
+                    <label className='form-label fs-4'>Gender</label>
+                    <input type="text" value={gender} onChange={(e)=>setGender(e.target.value)} className="form-control fs-4 p-5" placeholder="enter gender"></input>
 
                     
 
                 </section>
 
                 
+                <h1 className='fs-2 mt-5'>Birth Date</h1>
 
-                <div className='form-group m-3'>
-                    <input type="text" value={month} onChange={(e)=>setMonth(e.target.value)} className="form-control" placeholder="enter month"></input>
+              
+
+            <div className='d-flex'>
+                <div className='form-group m-3' style={{width:"50%"}}>
+                    <label className='form-label fs-4'>Month</label>
+                    <input type="text" value={month} onChange={(e)=>setMonth(e.target.value)} className="form-control fs-4 p-5" placeholder="enter month"></input>
                 </div>
 
-                <div className='form-group m-3'>
-                    <input type="text" value={day} onChange={(e)=>setDay(e.target.value)} className="form-control" placeholder="enter day"></input>
+                <div className='form-group m-3' style={{width:"20%"}}>
+                    <label className='form-label fs-4'>Day</label>
+                    <input type="text" value={day} onChange={(e)=>setDay(e.target.value)} className="form-control fs-4 p-5" placeholder="enter day"></input>
                 </div>
 
-                <div className='form-group m-3'>
-                    <input type="text" value={year} onChange={(e)=>setYear(e.target.value)} className="form-control" placeholder="enter year"></input>
+                <div className='form-group m-3' style={{width:"30%"}}>
+                    <label className='form-label fs-4'>Year</label>
+                    <input type="text" value={year} onChange={(e)=>setYear(e.target.value)} className="form-control fs-4 p-5" placeholder="enter year"></input>
                 </div>
 
+            </div>
+
+
+
+
+
+
+
                 <div className='form-group m-3'>
+                    <label className='form-label fs-4'>Mobile Number</label>
                     <input type="text" value={primarynumber} onChange={(e)=>setPrimary(e.target.value)} className="form-control fs-4 p-5" placeholder="enter primary number"></input>
-                    <small style={{color:"#0497e0",fontSize:"10px"}}>Please input your correct mobile number.</small>
+
+                    <small style={{color:"#0497e0",fontSize:"12px"}}>Please input your correct mobile number.</small>
                 </div>
 
                 <div className='d-flex'>
-
+                   
                     <div className='form-group m-3' style={{width:"60%"}}>
-                        <input type="text" value={secondarynumber} onChange={(e)=>setSecondary(e.target.value)} className="form-control fs-4 p-5" placeholder="enter secondary number"></input>
+                    <label className='form-label fs-4'>Secondary Mobile</label>
+                        <input type="text" value={secondarynumber} onChange={(e)=>setSecondary(e.target.value)} className="form-control fs-4 p-5" placeholder="(optional)"></input>
                     </div>
 
                     <div className='form-group m-3' style={{width:"40%"}}>
-                        <input type="text" value={landline} onChange={(e)=>setLandline(e.target.value)} className="form-control fs-4 p-5" placeholder="enter landline"></input>
+                        <label className='form-label fs-4'>Landline</label>
+                        <input type="text" value={landline} onChange={(e)=>setLandline(e.target.value)} className="form-control fs-4 p-5" placeholder="(optional)"></input>
                     </div>
 
                 </div>
 
 
+                <h1 className='fs-2 mt-5'>Address</h1>
 
 
                 <div className='form-group m-3'>
-                    <input type="text" value={province} onChange={(e)=>setProvince(e.target.value)} className="form-control" placeholder="enter province"></input>
+                    <label className='form-label fs-4'>Province</label>
+                    <input type="text" value={province} onChange={(e)=>setProvince(e.target.value)} className="form-control fs-4 p-5" placeholder="enter province"></input>
                 </div>
 
                 <div className='form-group m-3'>
-                    <input type="text" value={town} onChange={(e)=>setTown(e.target.value)} className="form-control" placeholder="enter town"></input>
+                    <label className='form-label fs-4'>Town</label>
+                    <input type="text" value={town} onChange={(e)=>setTown(e.target.value)} className="form-control fs-4 p-5" placeholder="enter town"></input>
                 </div>
+
+
+            <div className='d-flex'>
+                <div className='form-group m-3' style={{width:"70%"}}>
+                    <label className='form-label fs-4'>Barangay</label>
+                    <input type="text" value={barangay} onChange={(e)=>setBarangay(e.target.value)} className="form-control fs-4 p-5" placeholder="enter barangay"></input>
+                </div>
+                <div className='form-group m-3 ' style={{width:"30%"}}>
+                    <label className='form-label fs-4'>Zip Code</label>
+                    <input type="text" value={zipcode} onChange={(e)=>setZipcode(e.target.value)} className="form-control fs-4 p-5" placeholder="enter zipcode"></input>
+                </div>
+            
+            </div>
 
                 <div className='form-group m-3'>
-                    <input type="text" value={barangay} onChange={(e)=>setBarangay(e.target.value)} className="form-control" placeholder="enter barangay"></input>
-                </div>
-                 <div className='form-group m-3 '>
-                            <input type="text" value={zipcode} onChange={(e)=>setZipcode(e.target.value)} className="form-control fs-4 p-5" placeholder="enter zipcode"></input>
+                    <label className='form-label fs-4'>Current Address</label>
+                    <input type="text" value={currentaddress} onChange={(e)=>setCurrent(e.target.value)} className="form-control fs-4 p-5" placeholder="enter current address"></input>
+
+                    <small style={{color:"#0497e0",fontSize:"12px"}}>House #, Street, Subdivision, Brgy, City/Municipality</small><br></br>
+
+                    <label className='mt-5 fs-2 text-center'><p className='text-center'>UPLOAD PHOTO</p></label>
+
                 </div>
 
-                <div className='form-group m-3'>
-                            <input type="text" value={currentaddress} onChange={(e)=>setCurrent(e.target.value)} className="form-control fs-4 p-5" placeholder="enter current address"></input>
-                </div>
 
+
+
+               
                 <div className="form-group" style={{display:"flex",justifyContent:"center"}}>
-                            <div className='card'>
-                                <div className='card-header'>
+                    
+                            <div className='card mt-5'>
+                                <div className='card-header' style={{backgroundColor:"#0497e0", color:"white"}}>
                                     <p className='text-center fs-2 p-4'>PHOTO OF FACE</p>
                                 </div>
                                 <div className='card-body p-5'>
@@ -238,7 +293,7 @@ function Register()
                                   
                                     <div className='card-body'>
                                         
-                                    <input type="file" onChange={(e)=>setImage(e.target.files[0])} className="form-control text-center"></input>
+                                    <input type="file" onChange={(e)=>setImage(e.target.files[0])} className="form-control text-center fs-3 mb-5"></input>
 
                                     </div>
                                 </div>
@@ -247,8 +302,21 @@ function Register()
 
 
                 <div className='form-group m-3'>
-                    <button class="btn w-100 fs-4 p-4" onClick={signUp}style={{backgroundColor:"#0497e0", color:"white"}}>Sign Up</button>
+                    <button class="btn w-100 fs-2 p-4 mt-5 mb-5 sign-up" onClick={signUp}>SIGN UP</button>
                 </div>
+
+
+            </div>
+
+
+
+
+
+
+
+            <div className='mt-5 mb-5'>
+
+                <Footer />
 
 
             </div>
