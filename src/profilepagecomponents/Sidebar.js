@@ -8,7 +8,7 @@ function Sidebar()
 
     return(
 
-        <div className=' m-0' >
+        <div className=' m-0'  >
 
             <div className='d-flex align-items-center p-5 pb-0 mt-2 mb-0'>
                 <div className='logo'>

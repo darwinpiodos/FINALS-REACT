@@ -1,15 +1,15 @@
 
 import Darwin from '../image/darwin-piodos.jpg';
-import{Link, useHistory} from 'react-router-dom';
+import{Link, useHistory, useLocation} from 'react-router-dom';
 
 import React, {useState, useEffect} from 'react';
 
 
 
+
 function InfoCard()
 {
-
-   
+    const location=useLocation();
     const [data,setData]=useState([]);
     useEffect (  ()=>{
        getData();
@@ -46,11 +46,11 @@ function InfoCard()
 
 
     return(
+
+        
         <div className="container-fluid p-5 fs-4">
 
-
-                          
-
+           
 
             <div className="container p-5" style={{boxShadow:"0px 0px 5px gray",backgroundColor:"whitesmoke"}}>
                 <h2 className="fs-1">User Information</h2>
@@ -90,7 +90,7 @@ function InfoCard()
 
 
                     
-                    <div className="card-body d-flex p-4">
+                    <div className="card-body d-flex p-4" >
 
 
 
@@ -160,7 +160,7 @@ function InfoCard()
                                 <div className="card-header p-4">
                                 <i class="fa solid fa-address-card"></i>
                                 </div>
-                                <div className="card-body d-flex p-4">
+                                <div className="card-body d-flex p-4" style={{overflow:"hidden"}}>
                                         <div className="col-2">
                                             <p className="fw-bold">Birthday:</p>
                                             <p className="fw-bold">Gender:</p>

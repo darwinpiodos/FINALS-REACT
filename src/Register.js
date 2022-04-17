@@ -1,6 +1,6 @@
 import NavBar from './NavBar';
 import React, {useState, useEffect} from 'react';
-import {useHistory} from 'react-router-dom';
+import {useHistory, useLocation} from 'react-router-dom';
 import Footer from './Footer';
 import './App.css';
 
@@ -14,6 +14,8 @@ function Register()
             history.push("/add")
         }
     },[])
+
+    
     const[firstname,setfirstName]=useState("")
     const[lastname,setlastName]=useState("")
     const[middlename,setmiddleName]=useState("")
@@ -39,7 +41,7 @@ function Register()
 
 
     const history=useHistory();
-
+  
 
 
     async function signUp()
@@ -111,9 +113,12 @@ function Register()
         localStorage.setItem("user-info",JSON.stringify(res))
         history.push("/profile")
 
-
+      
          
     }
+
+
+
     return(
 
 

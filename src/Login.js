@@ -48,15 +48,15 @@ function Login()
             <div className='col-sm-6 offset-sm-3'>
                 <h1>Login</h1>
                 <div className='form-group'>
-                    <input type="text" onChange={(e)=>setEmail(e.target.value)} placeholder="enter email" className='form-control'></input>
+                    <input type="text" onChange={(e)=>setEmail(e.target.value)} placeholder="enter email" className='form-control fs-4 p-4'></input>
                 </div>
 
                 <div className='form-group'>
-                    <input type="password"  onChange={(e)=>setPassword(e.target.value)}  placeholder="enter password" className='form-control'></input>
+                    <input type="password"  onChange={(e)=>setPassword(e.target.value)}  placeholder="enter password" className='form-control fs-4 p-4'></input>
                 </div>
 
                 <div className='form-group'>
-                    <button onClick={login} className='btn btn-primary w-100'>Login</button>
+                    <button onClick={login} className='btn btn-primary w-100 fs-3 p-4'>Login</button>
                 </div>
 
 
