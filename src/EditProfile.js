@@ -69,7 +69,35 @@ class EditProfile extends Component
     updateUser = async  (e) => {
         e.preventDefault();
 
-        const res = await axios.post('http://localhost:8000/api/update/${user_id}')
+        const stud_id= this.props.match.params.id;
+        const res = await axios.put(`http://localhost:8000/api/update/${stud_id}`, this.state);
+        if(res.data.status === 200)
+        {
+            console.log(res.data.message);
+            this.setState({
+
+                firstname: '',
+                lastname: '',
+                middlename: '',
+                email: '',
+                password: '',
+                gender: '',
+                month: '',
+                day: '',
+                year: '',
+                primarynumber: '',
+                secondarynumber: '',
+                landline: '',
+                province: '',
+                town: '',
+                barangay: '',
+                zipcode: '',
+                currentaddress: '',
+                image: '',
+
+
+            });
+        }
     }
 
 
@@ -83,7 +111,7 @@ class EditProfile extends Component
                         Darwin Piodos
                     </div>
                     <div className='card-body'>
-
+  
                         <form onSubmit={this.updateUser}>
                             <div className='form-group mb-3'>
                                 <label>firstname</label>
@@ -97,83 +125,90 @@ class EditProfile extends Component
 
                             <div className='form-group mb-3'>
                                 <label>lastname</label>
-                                <input type="text" name="firstname" onChange={this.handleInput} value={this.state.lastname} className="form-control" />
+                                <input type="text" name="lastname" onChange={this.handleInput} value={this.state.lastname} className="form-control" />
+                            </div>
+
+                            {/* <div className='form-group mb-3'>
+                                <label>password</label>
+                                <input type="password" name="password" onChange={this.handleInput} value={this.state.password} className="form-control" />
+                            </div> */}
+
+                            <div className='form-group mb-3'>
+                                <label>gender</label>
+                                <input type="text" name="gender" onChange={this.handleInput} value={this.state.gender} className="form-control" />
                             </div>
 
                             <div className='form-group mb-3'>
-                                <label>firstname</label>
-                                <input type="text" name="firstname" onChange={this.handleInput} value={this.state.firstname} className="form-control" />
+                                <label>month</label>
+                                <input type="text" name="month" onChange={this.handleInput} value={this.state.month} className="form-control" />
                             </div>
 
                             <div className='form-group mb-3'>
-                                <label>firstname</label>
-                                <input type="text" name="firstname" onChange={this.handleInput} value={this.state.firstname} className="form-control" />
+                                <label>day</label>
+                                <input type="text" name="day" onChange={this.handleInput} value={this.state.day} className="form-control" />
                             </div>
 
                             <div className='form-group mb-3'>
-                                <label>firstname</label>
-                                <input type="text" name="firstname" onChange={this.handleInput} value={this.state.firstname} className="form-control" />
+                                <label>year</label>
+                                <input type="text" name="year" onChange={this.handleInput} value={this.state.year} className="form-control" />
                             </div>
 
                             <div className='form-group mb-3'>
-                                <label>firstname</label>
-                                <input type="text" name="firstname" onChange={this.handleInput} value={this.state.firstname} className="form-control" />
+                                <label>primarynumber</label>
+                                <input type="text" name="primarynumber" onChange={this.handleInput} value={this.state.primarynumber} className="form-control" />
                             </div>
 
                             <div className='form-group mb-3'>
-                                <label>firstname</label>
-                                <input type="text" name="firstname" onChange={this.handleInput} value={this.state.firstname} className="form-control" />
+                                <label>secondarynumber</label>
+                                <input type="text" name="secondarynumber" onChange={this.handleInput} value={this.state.secondarynumber} className="form-control" />
                             </div>
 
                             <div className='form-group mb-3'>
-                                <label>firstname</label>
-                                <input type="text" name="firstname" onChange={this.handleInput} value={this.state.firstname} className="form-control" />
+                                <label>landline</label>
+                                <input type="text" name="landline" onChange={this.handleInput} value={this.state.landline} className="form-control" />
                             </div>
 
                             <div className='form-group mb-3'>
-                                <label>firstname</label>
-                                <input type="text" name="firstname" onChange={this.handleInput} value={this.state.firstname} className="form-control" />
+                                <label>province</label>
+                                <input type="text" name="province" onChange={this.handleInput} value={this.state.province} className="form-control" />
                             </div>
 
                             <div className='form-group mb-3'>
-                                <label>firstname</label>
-                                <input type="text" name="firstname" onChange={this.handleInput} value={this.state.firstname} className="form-control" />
+                                <label>town</label>
+                                <input type="text" name="town" onChange={this.handleInput} value={this.state.town} className="form-control" />
                             </div>
 
                             <div className='form-group mb-3'>
-                                <label>firstname</label>
-                                <input type="text" name="firstname" onChange={this.handleInput} value={this.state.firstname} className="form-control" />
+                                <label>barangay</label>
+                                <input type="text" name="barangay" onChange={this.handleInput} value={this.state.barangay} className="form-control" />
                             </div>
 
                             <div className='form-group mb-3'>
-                                <label>firstname</label>
-                                <input type="text" name="firstname" onChange={this.handleInput} value={this.state.firstname} className="form-control" />
+                                <label>zipcode</label>
+                                <input type="text" name="zipcode" onChange={this.handleInput} value={this.state.zipcode} className="form-control" />
                             </div>
 
                             <div className='form-group mb-3'>
-                                <label>firstname</label>
-                                <input type="text" name="firstname" onChange={this.handleInput} value={this.state.firstname} className="form-control" />
+                                <label>currentaddress</label>
+                                <input type="text" name="currentaddress" onChange={this.handleInput} value={this.state.currentaddress} className="form-control" />
                             </div>
 
                             <div className='form-group mb-3'>
-                                <label>firstname</label>
-                                <input type="text" name="firstname" onChange={this.handleInput} value={this.state.firstname} className="form-control" />
+                                <label>image</label>
+                                <input type="text" name="firstname" onChange={this.handleInput} value={this.state.image} className="form-control" />
                             </div>
 
-                            <div className='form-group mb-3'>
-                                <label>firstname</label>
-                                <input type="text" name="firstname" onChange={this.handleInput} value={this.state.firstname} className="form-control" />
+
+                            <div className='form-group'>
+                                <button type="submit" className='btn btn-primary'>Update</button>
                             </div>
 
-                            <div className='form-group mb-3'>
-                                <label>firstname</label>
-                                <input type="text" name="firstname" onChange={this.handleInput} value={this.state.firstname} className="form-control" />
+                            <div className='form-group'>
+                                <input type="submit" onSubmit={this.updateUser} />
                             </div>
 
-                            <div className='form-group mb-3'>
-                                <label>firstname</label>
-                                <input type="text" name="firstname" onChange={this.handleInput} value={this.state.firstname} className="form-control" />
-                            </div>
+
+
                         </form>
 
 
